@@ -25,3 +25,7 @@ vite.config.ts.timestamp-*
 
 # other
 .vscode/
+
+# vault links (private notes, see badger-99/vault)
+CLAUDE.local.md
+*.pre-vault
