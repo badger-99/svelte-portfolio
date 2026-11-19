@@ -1,4 +1,5 @@
 {
+	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "svelte-portfolio-worker",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-11-19",
@@ -8,6 +9,6 @@
 	},
 	"workers_dev": true,
 	"observability": { "enabled": true },
-	"secrets": { "required": ["API_KEY"] },
+	"secrets": { "required": ["RESEND_API_KEY"] },
 	"previews": {}
 }
