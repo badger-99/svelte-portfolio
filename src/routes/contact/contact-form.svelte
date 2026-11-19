@@ -34,7 +34,7 @@
 			if (result.type === 'failure') {
 				toast.error('Oops! Looks like something went wrong.', {
 					description:
-						'You can send me an email at hello@alfredm.me, or click the button to use your app.',
+						'You can send me an email at hello@alfredm.me, or click the button to use your email app.',
 					action: {
 						label: 'Email Me',
 						onClick: () => {
