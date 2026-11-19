@@ -4,7 +4,7 @@ import { superValidate } from 'sveltekit-superforms';
 import { formSchema } from './schema';
 import { zod4 } from 'sveltekit-superforms/adapters';
 import { Resend } from 'resend';
-import { RESEND_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export const load: PageServerLoad = async () => {
 	return {
@@ -21,7 +21,7 @@ export const actions: Actions = {
 			});
 		}
 
-		const resend = new Resend(RESEND_API_KEY);
+		const resend = new Resend(env.RESEND_API_KEY);
 		const name = form.data.name;
 		const email = form.data.email;
 		const subject = form.data.subject ? form.data.subject : '(No Subject)';
