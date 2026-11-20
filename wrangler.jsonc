@@ -1,7 +1,6 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "svelte-portfolio-worker",
-	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-11-19",
 	"assets": {
 		"binding": "ASSETS",

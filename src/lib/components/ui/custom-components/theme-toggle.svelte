@@ -1,6 +1,6 @@
 <script>
 	import { toggleMode, mode, userPrefersMode } from 'mode-watcher';
-	import { Sun, Moon } from 'lucide-svelte';
+	import { Sun, Moon } from '@lucide/svelte';
 
 	let isDark = $derived(
 		userPrefersMode.current === 'dark' ||

@@ -48,9 +48,9 @@
 			<Icon data={cubes} />
 			<Muted>{project.type}</Muted>
 		</Muted>
-		<Muted className="py-4 md:py-2 md:min-h-[100px] md:max-h-[100px]"
-			>{ellipsify(project.shortDescription, 100)}</Muted
-		>
+		<Muted className="py-4 md:py-2 md:min-h-[100px] md:max-h-[100px]">
+			{ellipsify(project.shortDescription, 100)}
+		</Muted>
 		<Separator />
 		<Muted>Stack:</Muted>
 		<div class="flex flex-row flex-wrap items-center gap-2">

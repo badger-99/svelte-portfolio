@@ -132,8 +132,10 @@
 
 		<Form.Button
 			class="mx-auto w-fit cursor-pointer transition-colors duration-300 hover:bg-blue-600 hover:text-white"
-			disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</Form.Button
+			disabled={loading}
 		>
+			{loading ? 'Submitting...' : 'Submit'}
+		</Form.Button>
 
 		<div class="mx-auto mt-9 flex flex-row gap-3">
 			{#each HomeData.hero.links.slice(0, -1) as item}
