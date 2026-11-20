@@ -2,6 +2,6 @@
 	export let className = '';
 </script>
 
-<small {...$$restProps} class={`text-sm font-medium leading-none ${className}`}>
+<small {...$$restProps} class={`text-sm leading-none font-medium ${className}`}>
 	<slot />
 </small>

@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
 	import TitledPage from '$lib/components/ui/custom-components/titled-page.svelte';
 	import FancyCard from '$lib/components/ui/custom-components/fancy-card.svelte';
 	import { Separator } from '$lib/components/ui/separator';
@@ -14,14 +14,17 @@
 		{#each groups as group (group.category.slug)}
 			<div class="flex flex-col gap-6">
 				<div class="flex flex-row items-center gap-2">
-					<Separator data-slot={'horizontal'} class="data-[orientation=horizontal]:w-[50px] border border-muted-foreground" />
+					<Separator
+						data-slot={'horizontal'}
+						class="border border-muted-foreground data-[orientation=horizontal]:w-[50px]"
+					/>
 					<TextShine>{group.category.name}</TextShine>
 					<Separator data-slot={'horizontal'} class="flex-1  border border-muted-foreground" />
 				</div>
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{#each group.items as item (item.slug)}
 						<FancyCard bgImg={item.logo} color={item.color}>
-							<CardContent class='p-6'>
+							<CardContent class="p-6">
 								<CardTitle>{item.name}</CardTitle>
 							</CardContent>
 						</FancyCard>

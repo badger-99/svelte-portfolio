@@ -89,7 +89,10 @@
 	this={href ? 'a' : 'div'}
 	bind:this={el}
 	{href}
-	class={cn('card rounded-lg border border-muted-foreground bg-card text-card-foreground shadow-sm', className)}
+	class={cn(
+		'card rounded-lg border border-muted-foreground bg-card text-card-foreground shadow-sm',
+		className
+	)}
 	{...reset}
 	onmousemove={onHover}
 >

@@ -40,7 +40,7 @@ const items: Array<Experience> = [
 			'rails',
 			'rspec',
 			'swagger',
-			'sass',
+			'sass'
 		),
 		name: 'Full-stack Developer',
 		color: 'purple',

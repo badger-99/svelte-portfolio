@@ -7,19 +7,18 @@
 </script>
 
 <Tooltip.Provider delayDuration={100}>
-  <Tooltip.Root>
-
-    <Tooltip.Trigger class="group">
-      <div>
-        <Button size="icon" variant="outline" >
-          <img
-					class="size-[18px] grayscale-[0.5] group-hover:grayscale-0"
-					src={skill.logo}
-					alt={skill.name}
-          />
-        </Button>
-      </div>
-    </Tooltip.Trigger>
-    <Tooltip.Content>{skill.name}</Tooltip.Content>
-  </Tooltip.Root>
+	<Tooltip.Root>
+		<Tooltip.Trigger class="group">
+			<div>
+				<Button size="icon" variant="outline">
+					<img
+						class="size-[18px] grayscale-[0.5] group-hover:grayscale-0"
+						src={skill.logo}
+						alt={skill.name}
+					/>
+				</Button>
+			</div>
+		</Tooltip.Trigger>
+		<Tooltip.Content>{skill.name}</Tooltip.Content>
+	</Tooltip.Root>
 </Tooltip.Provider>

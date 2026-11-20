@@ -23,15 +23,18 @@
 </svelte:head>
 
 <ModeWatcher defaultMode="dark" />
-<Toaster richColors duration={10000} closeButton position={'top-center'}  />
+<Toaster richColors duration={10000} closeButton position={'top-center'} />
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 	<div class="hidden lg:block"><NavBar /></div>
-	<div class="block lg:hidden fixed top-0 left-0 w-full z-30 pt-3 pl-3 bg-linear-to-b from-black from-30% to-transparent">
+	<div
+		class="fixed top-0 left-0 z-30 block w-full bg-linear-to-b from-black from-30% to-transparent pt-3 pl-3 lg:hidden"
+	>
 		<div class="invert dark:invert-0">
-		<a href="/">
-			<img alt="header logo" src={NavBarData.left.icon} width="60" />
-		</a>
-	</div></div>
+			<a href="/">
+				<img alt="header logo" src={NavBarData.left.icon} width="60" />
+			</a>
+		</div>
+	</div>
 	<div class="mt-[50px] flex flex-1 flex-col">{@render children()}</div>
 	<div class="block lg:hidden"><DockNavBar /></div>
 </div>

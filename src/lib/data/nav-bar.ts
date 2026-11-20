@@ -7,7 +7,6 @@ import envelopeO from 'svelte-awesome/icons/envelopeO';
 // import fileTextO from 'svelte-awesome/icons/fileTextO';
 import type { IconData } from 'svelte-awesome/components/Icon.svelte';
 
-
 const left = { icon: logo } as const;
 
 const items: Array<{
@@ -19,7 +18,7 @@ const items: Array<{
 	{ title: 'Skills', icon: cubes, href: '/skills' },
 	{ title: 'Experience', icon: briefcase, href: '/experience' },
 	{ title: 'Projects', icon: cube, href: '/projects' },
-	{ title: 'Contact Me', icon: envelopeO, href: '/contact' },
+	{ title: 'Contact Me', icon: envelopeO, href: '/contact' }
 	// { title: 'Resumé', icon: fileTextO, href: '/resume' }
 ];
 

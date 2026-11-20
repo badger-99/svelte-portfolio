@@ -16,26 +16,44 @@
 
 	let loading = $state(false);
 
-	const form = superForm(untrack(() => data.form), {
-		validators: zod4Client(formSchema),
+	const form = superForm(
+		untrack(() => data.form),
+		{
+			validators: zod4Client(formSchema),
 
-		onSubmit: () => {
-			loading = true;
-		},
+			onSubmit: () => {
+				loading = true;
+			},
 
-		onResult: ({ result }) => {
-			loading = false;
+			onResult: ({ result }) => {
+				loading = false;
 
-			if (result.type === 'success') {
-				toast.success('Message sent!', {
-					description: "Thank you for reaching out, I'll respond ASAP!"
-				});
-			}
+				if (result.type === 'success') {
+					toast.success('Message sent!', {
+						description: "Thank you for reaching out, I'll respond ASAP!"
+					});
+				}
 
-			if (result.type === 'failure') {
+				if (result.type === 'failure') {
+					toast.error('Oops! Looks like something went wrong.', {
+						description:
+							'You can send me an email at hello@alfredm.me, or click the button to use your email app.',
+						action: {
+							label: 'Email Me',
+							onClick: () => {
+								window.location.href = 'mailto:hello@alfredm.me';
+							}
+						},
+						duration: Infinity
+					});
+				}
+			},
+
+			onError: () => {
+				loading = false;
 				toast.error('Oops! Looks like something went wrong.', {
 					description:
-						'You can send me an email at hello@alfredm.me, or click the button to use your email app.',
+						'You can send me an email at hello@alfredm.me, or click the button to use your app.',
 					action: {
 						label: 'Email Me',
 						onClick: () => {
@@ -45,23 +63,8 @@
 					duration: Infinity
 				});
 			}
-		},
-
-		onError: () => {
-			loading = false;
-			toast.error('Oops! Looks like something went wrong.', {
-				description:
-					'You can send me an email at hello@alfredm.me, or click the button to use your app.',
-				action: {
-					label: 'Email Me',
-					onClick: () => {
-						window.location.href = 'mailto:hello@alfredm.me';
-					}
-				},
-				duration: Infinity
-			});
 		}
-	});
+	);
 
 	const { form: formData, enhance } = form;
 </script>
@@ -127,8 +130,9 @@
 			<Form.FieldErrors />
 		</Form.Field>
 
-		<Form.Button class="mx-auto w-fit cursor-pointer hover:bg-blue-600 hover:text-white transition-colors duration-300" disabled={loading}
-			>{loading ? 'Submitting...' : 'Submit'}</Form.Button
+		<Form.Button
+			class="mx-auto w-fit cursor-pointer transition-colors duration-300 hover:bg-blue-600 hover:text-white"
+			disabled={loading}>{loading ? 'Submitting...' : 'Submit'}</Form.Button
 		>
 
 		<div class="mx-auto mt-9 flex flex-row gap-3">
@@ -137,7 +141,11 @@
 					<Tooltip.Provider>
 						<Tooltip.Root>
 							<Tooltip.Trigger>
-								<Button variant="outline" size="icon" class="border border-foreground cursor-pointer hover:text-blue-600 transition-colors duration-300">
+								<Button
+									variant="outline"
+									size="icon"
+									class="cursor-pointer border border-foreground transition-colors duration-300 hover:text-blue-600"
+								>
 									<Icon data={item.icon} style="width: 26px; height: 26px;" />
 								</Button>
 							</Tooltip.Trigger>

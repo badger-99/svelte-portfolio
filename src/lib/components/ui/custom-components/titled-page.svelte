@@ -8,10 +8,9 @@
 
 <Title {title} />
 
-	<ResponsiveContainer className="flex flex-col flex-1 pb-8 mx-auto">
-		<H1 className="text-center py-16">{title}</H1>
-		<div class="flex flex-1 flex-col gap-5 px-8 mb-25">
-			<slot />
-		</div>
-	</ResponsiveContainer>
-
+<ResponsiveContainer className="flex flex-col flex-1 pb-8 mx-auto">
+	<H1 className="text-center py-16">{title}</H1>
+	<div class="mb-25 flex flex-1 flex-col gap-5 px-8">
+		<slot />
+	</div>
+</ResponsiveContainer>
