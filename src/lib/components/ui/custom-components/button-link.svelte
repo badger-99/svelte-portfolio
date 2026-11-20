@@ -7,6 +7,7 @@
 	const { link }: { link: Link } = $props();
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -- generic component; callers resolve internal hrefs -->
 <a href={link.to} target={link.newTab ? '_blank' : undefined}>
 	<Tooltip.Provider delayDuration={300}>
 		<Tooltip.Root>
@@ -21,3 +22,4 @@
 		</Tooltip.Root>
 	</Tooltip.Provider>
 </a>
+<!-- eslint-enable svelte/no-navigation-without-resolve -->

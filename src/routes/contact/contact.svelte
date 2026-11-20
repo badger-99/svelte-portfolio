@@ -6,7 +6,7 @@
 	export let data: PageData;
 </script>
 
-<TitledPage title={'Contact Me'}>
+<TitledPage title="Contact Me">
 	<div class="mx-auto flex w-full flex-col justify-center text-center">
 		<Lead>
 			Have feedback or a project in mind? I'd love to hear from you — send me a message and let's

@@ -138,7 +138,8 @@
 		</Form.Button>
 
 		<div class="mx-auto mt-9 flex flex-row gap-3">
-			{#each HomeData.hero.links.slice(0, -1) as item}
+			{#each HomeData.hero.links.slice(0, -1) as item (item.href)}
+				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- external links -->
 				<a href={item.href} target="_blank">
 					<Tooltip.Provider>
 						<Tooltip.Root>

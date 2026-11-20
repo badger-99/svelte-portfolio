@@ -4,6 +4,7 @@
 	import Dock from '../ui/dock/dock.svelte';
 	import { page } from '$app/state';
 	import Button from '../ui/button/button.svelte';
+	import { resolve } from '$app/paths';
 </script>
 
 <div
@@ -14,9 +15,9 @@
 			direction="middle"
 			class="pointer-events-auto relative z-50 mx-auto flex h-full min-h-full transform-gpu flex-row items-center justify-between gap-2 rounded-full bg-background/15 backdrop-blur-md sm:gap-8 md:gap-9"
 		>
-			{#each NavBarData.items as item}
+			{#each NavBarData.items as item (item.href)}
 				<a
-					href={item.href}
+					href={resolve(item.href)}
 					class={`rounded-full ${page.url.pathname === item.href ? 'bg-white text-background' : ''}`}
 				>
 					<Button

@@ -6,13 +6,14 @@ import briefcase from 'svelte-awesome/icons/briefcase';
 import envelopeO from 'svelte-awesome/icons/envelopeO';
 // import fileTextO from 'svelte-awesome/icons/fileTextO';
 import type { IconData } from 'svelte-awesome/components/Icon.svelte';
+import type { RouteId } from '$app/types';
 
 const left = { icon: logo } as const;
 
 const items: Array<{
 	title: string;
 	icon: Record<string, IconData>;
-	href: string;
+	href: RouteId;
 }> = [
 	{ title: 'Home', icon: user, href: '/' },
 	{ title: 'Skills', icon: cubes, href: '/skills' },

@@ -10,6 +10,7 @@
 	import avatar from '#lib/assets/my_picture.jpg';
 	import H2 from '#lib/components/typography/h2.svelte';
 	import Cube from '#lib/components/ui/custom-components/cube.svelte';
+	import { resolve } from '$app/paths';
 
 	const typingSvgMed =
 		'https://readme-typing-svg.demolab.com?font=system-ui+Avenir+Helvetica+arial+sans-serif&weight=500&size=33&height=50&duration=4000&pause=1000&color=A1A1A1&center=true&random=false&width=395&lines=Front-end+Fixer;Back-end+Builder;Full+Stack+Engineer';
@@ -45,7 +46,8 @@
 						<img src={typingSvgMed} alt="typing animation" class="mx-auto block lg:hidden" />
 						<img src={typingSvgMed2} alt="typing animation" class="mx-auto hidden lg:block" />
 						<div class="flex flex-row gap-3">
-							{#each HomeData.hero.links as item}
+							{#each HomeData.hero.links as item (item.href)}
+								<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- external links -->
 								<a href={item.href} target="_blank">
 									<Tooltip.Provider>
 										<Tooltip.Root>
@@ -84,9 +86,11 @@
 				<div
 					class="prose text-md dark:prose-invert max-w-xl font-sans text-pretty text-muted-foreground"
 				>
-					Take a look around — <a href="/projects" class="home-link">check out my projects</a>,
-					<a href="/experience" class="home-link">see where I've worked</a>, or
-					<a href="/contact" class="home-link">say hello</a>.
+					Take a look around — <a href={resolve('/projects')} class="home-link">
+						check out my projects
+					</a>,
+					<a href={resolve('/experience')} class="home-link">see where I've worked</a>, or
+					<a href={resolve('/contact')} class="home-link">say hello</a>.
 				</div>
 			</div>
 		</ResponsiveContainer>

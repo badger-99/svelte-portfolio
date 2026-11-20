@@ -3,7 +3,6 @@
 	import type { Experience } from '#lib/data/types.ts';
 	import { computeExactDuration, getMonthAndYear } from '#lib/utils.ts';
 	import { ellipsify } from '@riadh-adrani/utils';
-	import { mode } from 'mode-watcher';
 	import SkillBadge from '#lib/components/ui/custom-components/skill-badge.svelte';
 	import * as Avatar from '#lib/components/ui/avatar/index.js';
 	import { Badge } from '#lib/components/ui/badge/index.ts';
