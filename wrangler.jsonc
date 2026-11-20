@@ -1,13 +1,13 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "svelte-portfolio-worker",
-	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-11-19",
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
 	"workers_dev": true,
+	"routes": [{ "pattern": "alfredm.me", "custom_domain": true }],
 	"observability": { "enabled": true },
 	"secrets": { "required": ["RESEND_API_KEY"] },
 	"previews": {}

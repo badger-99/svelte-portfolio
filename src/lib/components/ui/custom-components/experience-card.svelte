@@ -1,17 +1,16 @@
 <script lang="ts">
-	import Assets from '$lib/data/assets';
-	import type { Experience } from '$lib/data/types';
-	import { computeExactDuration, getMonthAndYear } from '$lib/utils';
+	import Assets from '#lib/data/assets.ts';
+	import type { Experience } from '#lib/data/types.ts';
+	import { computeExactDuration, getMonthAndYear } from '#lib/utils.ts';
 	import { ellipsify } from '@riadh-adrani/utils';
-	import { mode } from 'mode-watcher';
-	import SkillBadge from '$lib/components/ui/custom-components/skill-badge.svelte';
-	import * as Avatar from '$lib/components/ui/avatar/index.js';
-	import { Badge } from '$lib/components/ui/badge';
-	import { CardContent, CardTitle } from '$lib/components/ui/card';
-	import FancyCard from '$lib/components/ui/custom-components/fancy-card.svelte';
+	import SkillBadge from '#lib/components/ui/custom-components/skill-badge.svelte';
+	import * as Avatar from '#lib/components/ui/avatar/index.js';
+	import { Badge } from '#lib/components/ui/badge/index.ts';
+	import { CardContent, CardTitle } from '#lib/components/ui/card/index.ts';
+	import FancyCard from '#lib/components/ui/custom-components/fancy-card.svelte';
 	import Icon from 'svelte-awesome';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import Muted from '$lib/components/typography/muted.svelte';
+	import * as Tooltip from '#lib/components/ui/tooltip/index.js';
+	import Muted from '#lib/components/typography/muted.svelte';
 	import building from 'svelte-awesome/icons/building';
 	import mapMarker from 'svelte-awesome/icons/mapMarker';
 	import hourglass from 'svelte-awesome/icons/hourglass';
@@ -20,7 +19,9 @@
 
 	const { experience }: { experience: Experience } = $props();
 
-	const exactDuration = computeExactDuration(experience.period.from, experience.period.to);
+	const exactDuration = $derived(
+		computeExactDuration(experience.period.from, experience.period.to)
+	);
 
 	let from = $derived(getMonthAndYear(experience.period.from));
 	let to = $derived(getMonthAndYear(experience.period.to));

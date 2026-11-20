@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { HTMLAttributes, MouseEventHandler } from 'svelte/elements';
-	import { cn } from '$lib/utils.js';
+	import { cn } from '#lib/utils.js';
 	import { changeColorOpacity, isHexColor } from '@riadh-adrani/utils';
-	import { convertNamedToHexColor, NAMED_COLORS, type NamedColor } from '$lib/data/colors';
+	import { convertNamedToHexColor, NAMED_COLORS, type NamedColor } from '#lib/data/colors.ts';
 
 	const {
 		color = NAMED_COLORS.gray,
@@ -84,12 +84,14 @@
 	});
 </script>
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <svelte:element
 	this={href ? 'a' : 'div'}
 	bind:this={el}
 	{href}
-	class={cn('card rounded-lg border border-muted-foreground bg-card text-card-foreground shadow-sm', className)}
+	class={cn(
+		'card rounded-lg border border-muted-foreground bg-card text-card-foreground shadow-sm',
+		className
+	)}
 	{...reset}
 	onmousemove={onHover}
 >

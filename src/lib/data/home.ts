@@ -16,7 +16,7 @@ const hero: {
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/badger-99', icon: github },
 		{ label: 'LinkedIn', href: 'https://linkedin.com/in/alfredmkg', icon: linkedinSquare },
-		{ label: 'MailTo', href: 'mailto:hello@alfredm.me.com', icon: at }
+		{ label: 'MailTo', href: 'mailto:hello@alfredm.me', icon: at }
 	]
 };
 

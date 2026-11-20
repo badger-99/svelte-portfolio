@@ -63,8 +63,8 @@
 		align-items: center;
 		box-shadow:
     /* inset 0 0 50px 10px #031949, */
-    0 0 10px 2px #f2f4ff,
-    0 0 10px 2px #3874f6;
+			0 0 10px 2px #f2f4ff,
+			0 0 10px 2px #3874f6;
 	}
 
 	/* Individual face transforms (translateZ = 60px on default) */
@@ -88,7 +88,7 @@
 	}
 
 	/* Shadow element */
-  /* shadow size afjusted by +/-80px (w- 200 -> 280, h- 125 -> 205) and bottom offset adjusted */
+	/* shadow size afjusted by +/-80px (w- 200 -> 280, h- 125 -> 205) and bottom offset adjusted */
 	#cube-container #shadow {
 		/* shadow color */
 		background: #2d3a56;
@@ -156,8 +156,8 @@
 	}
 
 	@media (min-width: 1024px) {
-#cube-container #shadow {
-		display: block;
-	}
+		#cube-container #shadow {
+			display: block;
+		}
 	}
 </style>

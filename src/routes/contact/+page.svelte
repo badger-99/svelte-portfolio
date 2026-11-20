@@ -1,6 +1,6 @@
-<script lang='ts'>
+<script lang="ts">
 	import ContactMe from './contact.svelte';
-	import type { PageData } from "./$types.js";
+	import type { PageData } from './$types.js';
 	export let data: PageData;
 </script>
 

@@ -1,17 +1,17 @@
 <script lang="ts">
-	import Assets from '$lib/data/assets';
-	import type { Project } from '$lib/data/types';
+	import Assets from '#lib/data/assets.ts';
+	import type { Project } from '#lib/data/types.ts';
 	import { ellipsify } from '@riadh-adrani/utils';
-	import ButtonLink from '$lib/components/ui/custom-components/button-link.svelte';
-	import SkillBadge from '$lib/components/ui/custom-components/skill-badge.svelte';
-	import * as Avatar from '$lib/components/ui/avatar/index.js';
-	import { CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
-	import FancyCard from '$lib/components/ui/custom-components/fancy-card.svelte';
+	import ButtonLink from '#lib/components/ui/custom-components/button-link.svelte';
+	import SkillBadge from '#lib/components/ui/custom-components/skill-badge.svelte';
+	import * as Avatar from '#lib/components/ui/avatar/index.js';
+	import { CardContent, CardHeader, CardTitle } from '#lib/components/ui/card/index.ts';
+	import FancyCard from '#lib/components/ui/custom-components/fancy-card.svelte';
 	import Icon from 'svelte-awesome';
 	import cubes from 'svelte-awesome/icons/cubes';
-	import { Separator } from '$lib/components/ui/separator/index.js';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import Muted from '$lib/components/typography/muted.svelte';
+	import { Separator } from '#lib/components/ui/separator/index.js';
+	import * as Tooltip from '#lib/components/ui/tooltip/index.js';
+	import Muted from '#lib/components/typography/muted.svelte';
 
 	const { project }: { project: Project } = $props();
 </script>
@@ -48,9 +48,9 @@
 			<Icon data={cubes} />
 			<Muted>{project.type}</Muted>
 		</Muted>
-		<Muted className="py-4 md:py-2 md:min-h-[100px] md:max-h-[100px]"
-			>{ellipsify(project.shortDescription, 100)}</Muted
-		>
+		<Muted className="py-4 md:py-2 md:min-h-[100px] md:max-h-[100px]">
+			{ellipsify(project.shortDescription, 100)}
+		</Muted>
 		<Separator />
 		<Muted>Stack:</Muted>
 		<div class="flex flex-row flex-wrap items-center gap-2">
