@@ -20,7 +20,7 @@
 
 	const { experience }: { experience: Experience } = $props();
 
-	const exactDuration = computeExactDuration(experience.period.from, experience.period.to);
+	const exactDuration = $derived(computeExactDuration(experience.period.from, experience.period.to));
 
 	let from = $derived(getMonthAndYear(experience.period.from));
 	let to = $derived(getMonthAndYear(experience.period.to));
