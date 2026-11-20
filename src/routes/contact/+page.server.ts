@@ -2,9 +2,9 @@ import type { PageServerLoad, Actions } from './$types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms';
 import { formSchema } from './schema';
-import { zod4 } from 'sveltekit-superforms/adapters';
+import { zod as zod4 } from 'sveltekit-superforms/adapters/zod4';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
+import { RESEND_API_KEY, CONTACT_TO } from '$app/env/private';
 
 export const load: PageServerLoad = async () => {
 	return {
@@ -21,7 +21,7 @@ export const actions: Actions = {
 			});
 		}
 
-		const resend = new Resend(env.RESEND_API_KEY);
+		const resend = new Resend(RESEND_API_KEY);
 		const name = form.data.name;
 		const email = form.data.email;
 		const subject = form.data.subject ? form.data.subject : '(No Subject)';
@@ -31,7 +31,7 @@ export const actions: Actions = {
 		try {
 			const { error } = await resend.emails.send({
 				from,
-				to: ['hello@alfredm.me'],
+				to: CONTACT_TO || ['hello@alfredm.me'],
 				replyTo: `${email}`,
 				subject: `${name}: ${subject}`,
 				text: `${name} - ${email} said:\n\n${message}`

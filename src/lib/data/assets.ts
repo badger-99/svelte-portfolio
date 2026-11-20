@@ -1,6 +1,6 @@
 import { resolve } from '$app/paths';
 
-const base = resolve('/')
+const base = resolve('/');
 const url = (file: string) => `${base}logos/${file}`;
 
 const asset = (filename: string) => {

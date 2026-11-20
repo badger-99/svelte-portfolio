@@ -30,3 +30,8 @@ vite.config.ts.timestamp-*
 # vault links (private notes, see badger-99/vault)
 CLAUDE.local.md
 *.pre-vault
+
+# Playwright
+/test-results
+/playwright-report
+/playwright/.cache
