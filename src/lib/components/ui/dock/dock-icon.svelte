@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '#lib/utils.ts';
 	import { Motion, useMotionValue, useSpring, useTransform } from 'svelte-motion';
 
 	export let magnification = 60;

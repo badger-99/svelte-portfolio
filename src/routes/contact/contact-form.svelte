@@ -1,14 +1,14 @@
 <script lang="ts">
-	import * as Form from '$lib/components/ui/form/index.js';
-	import { Input } from '$lib/components/ui/input/index.js';
-	import { Textarea } from '$lib/components/ui/textarea/index.js';
+	import * as Form from '#lib/components/ui/form/index.js';
+	import { Input } from '#lib/components/ui/input/index.js';
+	import { Textarea } from '#lib/components/ui/textarea/index.js';
 	import { formSchema, type FormSchema } from './schema';
 	import { type SuperValidated, type Infer, superForm } from 'sveltekit-superforms';
 	import { zodClient as zod4Client } from 'sveltekit-superforms/adapters/zod4';
 	import { toast } from 'svelte-sonner';
-	import HomeData from '$lib/data/home';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import { Button } from '$lib/components/ui/button';
+	import HomeData from '#lib/data/home.ts';
+	import * as Tooltip from '#lib/components/ui/tooltip/index.js';
+	import { Button } from '#lib/components/ui/button/index.ts';
 	import { Icon } from 'svelte-awesome';
 	import { untrack } from 'svelte';
 

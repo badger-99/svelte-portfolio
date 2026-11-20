@@ -2,11 +2,11 @@
 	import './layout.css';
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
-	import favicon from '$lib/assets/favicon.ico';
-	import NavBar from '$lib/components/navigation/nav-bar.svelte';
-	import { Toaster } from '$lib/components/ui/sonner';
-	import DockNavBar from '$lib/components/navigation/nav-dock.svelte';
-	import NavBarData from '$lib/data/nav-bar';
+	import favicon from '#lib/assets/favicon.ico';
+	import NavBar from '#lib/components/navigation/nav-bar.svelte';
+	import { Toaster } from '#lib/components/ui/sonner/index.ts';
+	import DockNavBar from '#lib/components/navigation/nav-dock.svelte';
+	import NavBarData from '#lib/data/nav-bar.ts';
 
 	let { children } = $props();
 </script>

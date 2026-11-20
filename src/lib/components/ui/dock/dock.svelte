@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Motion } from 'svelte-motion';
 	import { cva, type VariantProps } from 'class-variance-authority';
-	import { cn } from '$lib/utils';
+	import { cn } from '#lib/utils.ts';
 
 	interface DockProps extends VariantProps<typeof dockVariants> {
 		className?: string;

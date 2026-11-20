@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NavBarData from '$lib/data/nav-bar';
+	import NavBarData from '#lib/data/nav-bar.ts';
 	import { Icon } from 'svelte-awesome';
 	import Dock from '../ui/dock/dock.svelte';
 	import { page } from '$app/state';

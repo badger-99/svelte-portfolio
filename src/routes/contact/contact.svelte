@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TitledPage from '$lib/components/ui/custom-components/titled-page.svelte';
+	import TitledPage from '#lib/components/ui/custom-components/titled-page.svelte';
 	import Lead from '../../lib/components/typography/lead.svelte';
 	import ContactForm from './contact-form.svelte';
 	import type { PageData } from './$types.js';

@@ -1,4 +1,4 @@
-import logo from '$lib/assets/w-LogoHeader1.png';
+import logo from '#lib/assets/w-LogoHeader1.png';
 import user from 'svelte-awesome/icons/user';
 import cube from 'svelte-awesome/icons/cube';
 import cubes from 'svelte-awesome/icons/cubes';

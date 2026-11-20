@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ResponsiveContainer from '$lib/components/ui/custom-components/responsive-container.svelte';
-	import H1 from '$lib/components/typography/h1.svelte';
-	import Title from '$lib/components/ui/custom-components/title.svelte';
+	import ResponsiveContainer from '#lib/components/ui/custom-components/responsive-container.svelte';
+	import H1 from '#lib/components/typography/h1.svelte';
+	import Title from '#lib/components/ui/custom-components/title.svelte';
 
 	export let title = 'Title';
 </script>

@@ -1,6 +1,6 @@
 <script>
-	import { ThemeToggle } from '$lib/components';
-	import NavBarData from '$lib/data/nav-bar';
+	import { ThemeToggle } from '#lib/components/index.ts';
+	import NavBarData from '#lib/data/nav-bar.ts';
 	import { Icon } from 'svelte-awesome';
 	import { page } from '$app/state';
 </script>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
+	import Button from '#lib/components/ui/button/button.svelte';
 	import Icon from 'svelte-awesome';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import type { Link } from '$lib/data/types';
+	import * as Tooltip from '#lib/components/ui/tooltip/index.js';
+	import type { Link } from '#lib/data/types.ts';
 
 	const { link }: { link: Link } = $props();
 </script>

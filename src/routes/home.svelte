@@ -1,15 +1,15 @@
 <script>
-	import ResponsiveContainer from '$lib/components/ui/custom-components/responsive-container.svelte';
-	import H1 from '$lib/components/typography/h1.svelte';
-	import * as Avatar from '$lib/components/ui/avatar/index.js';
-	import { Button } from '$lib/components/ui/button';
+	import ResponsiveContainer from '#lib/components/ui/custom-components/responsive-container.svelte';
+	import H1 from '#lib/components/typography/h1.svelte';
+	import * as Avatar from '#lib/components/ui/avatar/index.js';
+	import { Button } from '#lib/components/ui/button/index.ts';
 	import Icon from 'svelte-awesome';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import HomeData from '$lib/data/home';
-	import BaseData from '$lib/data/base';
-	import avatar from '$lib/assets/my_picture.jpg';
-	import H2 from '$lib/components/typography/h2.svelte';
-	import Cube from '$lib/components/ui/custom-components/cube.svelte';
+	import * as Tooltip from '#lib/components/ui/tooltip/index.js';
+	import HomeData from '#lib/data/home.ts';
+	import BaseData from '#lib/data/base.ts';
+	import avatar from '#lib/assets/my_picture.jpg';
+	import H2 from '#lib/components/typography/h2.svelte';
+	import Cube from '#lib/components/ui/custom-components/cube.svelte';
 
 	const typingSvgMed =
 		'https://readme-typing-svg.demolab.com?font=system-ui+Avenir+Helvetica+arial+sans-serif&weight=500&size=33&height=50&duration=4000&pause=1000&color=A1A1A1&center=true&random=false&width=395&lines=Front-end+Fixer;Back-end+Builder;Full+Stack+Engineer';
