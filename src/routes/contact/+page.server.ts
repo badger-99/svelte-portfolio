@@ -31,7 +31,7 @@ export const actions: Actions = {
 		try {
 			const { error } = await resend.emails.send({
 				from,
-				to: ['hello@alfredm.me'],
+				to: env.CONTACT_TO || ['hello@alfredm.me'],
 				replyTo: `${email}`,
 				subject: `${name}: ${subject}`,
 				text: `${name} - ${email} said:\n\n${message}`
