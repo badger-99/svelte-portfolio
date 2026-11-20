@@ -4,18 +4,19 @@
 	import { Textarea } from '$lib/components/ui/textarea/index.js';
 	import { formSchema, type FormSchema } from './schema';
 	import { type SuperValidated, type Infer, superForm } from 'sveltekit-superforms';
-	import { zod4Client } from 'sveltekit-superforms/adapters';
+	import { zodClient as zod4Client } from 'sveltekit-superforms/adapters/zod4';
 	import { toast } from 'svelte-sonner';
 	import HomeData from '$lib/data/home';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
 	import { Button } from '$lib/components/ui/button';
 	import { Icon } from 'svelte-awesome';
+	import { untrack } from 'svelte';
 
 	let { data }: { data: { form: SuperValidated<Infer<FormSchema>> } } = $props();
 
 	let loading = $state(false);
 
-	const form = superForm(data.form, {
+	const form = superForm(untrack(() => data.form), {
 		validators: zod4Client(formSchema),
 
 		onSubmit: () => {

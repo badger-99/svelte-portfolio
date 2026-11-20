@@ -2,7 +2,7 @@ import type { PageServerLoad, Actions } from './$types.js';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms';
 import { formSchema } from './schema';
-import { zod4 } from 'sveltekit-superforms/adapters';
+import { zod as zod4 } from 'sveltekit-superforms/adapters/zod4';
 import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';
 
