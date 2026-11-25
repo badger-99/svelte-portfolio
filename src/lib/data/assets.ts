@@ -9,6 +9,7 @@ const asset = (filename: string) => {
 
 const Assets = {
 	CampGilgal: asset('camp-gilgal.png'),
+	CapstoneFellowship: asset('capstone-fellowship.png'),
 	CloudflareWorkers: asset('cloudflare-workers.svg'),
 	CSS: asset('css.svg'),
 	Drizzle: asset('drizzle.svg'),

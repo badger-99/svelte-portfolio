@@ -19,7 +19,8 @@ export enum ContractType {
 	SelfEmployed = 'Self-employed',
 	Freelance = 'Freelance',
 	Contract = 'Contract',
-	Internship = 'Internship'
+	Internship = 'Internship',
+	Volunteer = 'Volunteer'
 }
 
 export type Asset = { light: string; dark: string };
