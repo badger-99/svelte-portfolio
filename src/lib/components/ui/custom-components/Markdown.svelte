@@ -27,7 +27,7 @@
 	});
 </script>
 
-<div bind:this={container} class="markdown-container">
+<div bind:this={container} class="markdown-container mx-auto prose dark:prose-invert">
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -- sanitized by DOMPurify above -->
 	{@html html}
 </div>
