@@ -9,8 +9,8 @@ const items: Array<Project> = [
 		slug: 'stresstest',
 		color: '#3b82f6',
 		description:
-			"StressTest is a simple, friendly self-assessment app that helps you understand your stress levels and emotional balance. It's designed to promote awareness, reflection, and well-being — without collecting personal data.",
-		shortDescription: 'A mindful check-in for your stress and emotional well-being. ',
+			'StressTest is a stress check-in built on the Perceived Stress Scale (PSS-10), one of the most widely used stress questionnaires. A language model writes a short personal summary from your answers. Results stay in your browser, and the AI receives your answers but never your name.',
+		shortDescription: 'A PSS-10 stress check-in with an AI-written summary. No account needed.',
 		links: [
 			{
 				to: 'https://github.com/badger-99/stress_test',
@@ -22,23 +22,23 @@ const items: Array<Project> = [
 		],
 		logo: Assets.StressTest,
 		name: 'StressTest',
-		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'supabase'),
+		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel'),
 		type: 'Web Application',
 		screenshots: [
 			{
-				label: 'screen 1',
+				label: 'Home',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-1.png'
 			},
 			{
-				label: '2',
+				label: 'Check-in',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-2.png'
 			},
 			{
-				label: '3',
+				label: 'Results',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-3.png'
 			},
 			{
-				label: '4',
+				label: 'History',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-4.png'
 			}
 		]
