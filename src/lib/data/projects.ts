@@ -45,7 +45,7 @@ const items: Array<Project> = [
 	},
 	{
 		slug: 'project-nehemiah',
-		color: '#ffc018',
+		color: '#ffd00d',
 		description:
 			'A contribution tracker for Capstone Fellowship, in daily use by the church in English and Kiswahili, with SMS reminders and email receipts. I designed and specified the system and shipped it with AI-assisted development, including unit and end-to-end test suites.',
 		shortDescription:
@@ -65,7 +65,7 @@ const items: Array<Project> = [
 	},
 	{
 		slug: 'svelte-portfolio',
-		color: 'orange',
+		color: '#ff7a00',
 		description: 'Personal Portfolio',
 		shortDescription:
 			'This portfolio website, in case you like it and want to make your own based on it! :)',
