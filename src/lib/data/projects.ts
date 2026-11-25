@@ -22,7 +22,7 @@ const items: Array<Project> = [
 		],
 		logo: Assets.StressTest,
 		name: 'StressTest',
-		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel', 'zod'),
+		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel', 'zod', 'ai-sdk'),
 		type: 'Web Application',
 		screenshots: [
 			{
@@ -60,7 +60,16 @@ const items: Array<Project> = [
 		],
 		logo: Assets.ProjectNehemiah,
 		name: 'Project Nehemiah',
-		skills: getSkills('nextjs', 'ts', 'supabase', 'tailwindcss', 'vitest', 'playwright'),
+		skills: getSkills(
+			'nextjs',
+			'ts',
+			'supabase',
+			'tailwindcss',
+			'vitest',
+			'playwright',
+			'resend',
+			'nextsms'
+		),
 		type: 'Volunteer Project'
 	},
 	{
@@ -80,7 +89,16 @@ const items: Array<Project> = [
 		],
 		logo: Assets.CampGilgal,
 		name: 'Camp Gilgal',
-		skills: getSkills('svelte', 'ts', 'postgresql', 'cloudflare-workers', 'neon'),
+		skills: getSkills(
+			'svelte',
+			'sveltekit',
+			'ts',
+			'postgresql',
+			'cloudflare-workers',
+			'neon',
+			'drizzle',
+			'nextsms'
+		),
 		type: 'Volunteer Project'
 	},
 	{
@@ -99,7 +117,7 @@ const items: Array<Project> = [
 		],
 		logo: Assets.Svelte,
 		name: 'Svelte Portfolio',
-		skills: getSkills('svelte', 'ts', 'tailwindcss'),
+		skills: getSkills('svelte', 'sveltekit', 'ts', 'tailwindcss', 'cloudflare-workers', 'resend'),
 		type: 'Website'
 	},
 	{
