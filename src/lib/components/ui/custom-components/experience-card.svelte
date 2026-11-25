@@ -16,6 +16,7 @@
 	import hourglass from 'svelte-awesome/icons/hourglass';
 	import calendarO from 'svelte-awesome/icons/calendarO';
 	import clockO from 'svelte-awesome/icons/clockO';
+	import { resolve } from '$app/paths';
 
 	const { experience }: { experience: Experience } = $props();
 
@@ -44,7 +45,14 @@
 			<Avatar.Image class="block aspect-square h-full w-full" src={experience.logo} />
 		</Avatar.Root>
 		<div class="flex flex-col gap-4">
-			<CardTitle>{experience.name}</CardTitle>
+			<CardTitle>
+				<a
+					href={resolve('/experience/[slug]', { slug: experience.slug })}
+					class="underline-offset-4 hover:underline"
+				>
+					{experience.name}
+				</a>
+			</CardTitle>
 			<div class="flex flex-row flex-wrap gap-1">
 				{#each badges as badge (badge.icon)}
 					<Tooltip.Provider delayDuration={300}>

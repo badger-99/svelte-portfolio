@@ -10,10 +10,13 @@ import type { RouteId } from '$app/types';
 
 const left = { icon: logo } as const;
 
+// Nav links are fixed pages, so leave out routes that need a param (e.g. `/experience/[slug]`).
+type NavRoute = Exclude<RouteId, `${string}[${string}`>;
+
 const items: Array<{
 	title: string;
 	icon: Record<string, IconData>;
-	href: RouteId;
+	href: NavRoute;
 }> = [
 	{ title: 'Home', icon: user, href: '/' },
 	{ title: 'Skills', icon: cubes, href: '/skills' },
