@@ -44,6 +44,26 @@ const items: Array<Project> = [
 		]
 	},
 	{
+		slug: 'project-nehemiah',
+		color: '#ffc018',
+		description:
+			'A contribution tracker for Capstone Fellowship, in daily use by the church in English and Kiswahili, with SMS reminders and email receipts. I designed and specified the system and shipped it with AI-assisted development, including unit and end-to-end test suites.',
+		shortDescription:
+			'A bilingual (English/Kiswahili) contribution tracker in daily use by a church.',
+		links: [
+			{
+				to: 'https://projectnehemiah.capstonechurches.org',
+				label: 'Website',
+				newTab: true,
+				icon: globe
+			}
+		],
+		logo: Assets.ProjectNehemiah,
+		name: 'Project Nehemiah',
+		skills: getSkills('nextjs', 'ts', 'supabase', 'tailwindcss', 'vitest', 'playwright'),
+		type: 'Volunteer Project'
+	},
+	{
 		slug: 'svelte-portfolio',
 		color: 'orange',
 		description: 'Personal Portfolio',

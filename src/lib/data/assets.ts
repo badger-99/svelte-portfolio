@@ -23,6 +23,7 @@ const Assets = {
 	Php: asset('php.svg'),
 	Playwright: asset('playwright.svg'),
 	PostgreSQL: asset('postgresql.svg'),
+	ProjectNehemiah: asset('project-nehemiah.png'),
 	Python: asset('python.svg'),
 	Rails: asset('rails.svg'),
 	React: asset('react.svg'),
