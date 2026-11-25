@@ -16,8 +16,8 @@
 		</div>
 
 		<div class="faces" id="face4">
-			<i class="devicon-ruby-plain colored"></i>
-			<!-- <img src={ruby} alt = ''/> -->
+			<i class="devicon-svelte-plain colored"></i>
+			<!-- <img src={svelte} alt = ''/> -->
 		</div>
 
 		<div class="faces" id="face5">
@@ -26,8 +26,8 @@
 		</div>
 
 		<div class="faces" id="face6">
-			<i class="devicon-supabase-plain colored"></i>
-			<!-- <img src={supabase} alt='supabase' /> -->
+			<i class="devicon-react-original colored"></i>
+			<!-- <img src={react} alt='react' /> -->
 		</div>
 	</div>
 	<div id="shadow"></div>
