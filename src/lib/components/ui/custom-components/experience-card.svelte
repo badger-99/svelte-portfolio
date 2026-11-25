@@ -36,7 +36,12 @@
 	] as const);
 </script>
 
-<FancyCard color={experience.color}>
+<!--
+	Stretched link: the title link's ::after layer covers the whole card (positioned against
+	FancyCard's `relative`), so a tap anywhere on the card opens the detail page. Buttons that
+	must keep working (tooltip triggers, skill badges) sit above that layer with `relative z-10`.
+-->
+<FancyCard color={experience.color} class="relative">
 	<CardContent class="flex flex-col gap-8 p-6 sm:flex-row">
 		<Avatar.Root class="size-10">
 			<Avatar.Fallback>
@@ -48,7 +53,7 @@
 			<CardTitle>
 				<a
 					href={resolve('/experience/[slug]', { slug: experience.slug })}
-					class="underline-offset-4 hover:underline"
+					class="after:absolute after:inset-0 after:rounded-lg focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring"
 				>
 					{experience.name}
 				</a>
@@ -57,7 +62,7 @@
 				{#each badges as badge (badge.icon)}
 					<Tooltip.Provider delayDuration={300}>
 						<Tooltip.Root>
-							<Tooltip.Trigger>
+							<Tooltip.Trigger class="relative z-10">
 								<Badge variant="secondary" class="flex flex-row items-center gap-1">
 									<Icon class="shrink-0" data={badge.icon} />
 									<!-- <i class={`shrink-0 ${badge.icon}`}></i> -->
@@ -71,7 +76,7 @@
 			</div>
 			<Tooltip.Provider delayDuration={300}>
 				<Tooltip.Root>
-					<Tooltip.Trigger>
+					<Tooltip.Trigger class="relative z-10">
 						<Muted className="flex flex-row items-center gap-2">
 							<Icon class="shrink-0" data={calendarO} />
 							<div>{period}</div>
@@ -82,7 +87,7 @@
 			</Tooltip.Provider>
 			<Tooltip.Provider delayDuration={300}>
 				<Tooltip.Root>
-					<Tooltip.Trigger>
+					<Tooltip.Trigger class="relative z-10">
 						<Muted className="flex flex-row items-center gap-2">
 							<Icon class="shrink-0" data={clockO} />
 							<div>{exactDuration}</div>
@@ -96,7 +101,7 @@
 			</div>
 			<div class="flex flex-row flex-wrap gap-2">
 				{#each experience.skills as skill (skill.slug)}
-					<SkillBadge {skill} />
+					<div class="relative z-10"><SkillBadge {skill} /></div>
 				{/each}
 			</div>
 		</div>
