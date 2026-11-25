@@ -28,9 +28,7 @@
 			<CardTitle class="h-auto min-w-0 flex-1 overflow-x-hidden">
 				<Tooltip.Provider>
 					<Tooltip.Root>
-						<Tooltip.Trigger
-							class="w-full truncate overflow-x-hidden overflow-y-auto text-left text-nowrap text-ellipsis"
-						>
+						<Tooltip.Trigger class="w-full truncate text-left leading-normal">
 							{project.name}
 						</Tooltip.Trigger>
 						<Tooltip.Content>{project.name}</Tooltip.Content>

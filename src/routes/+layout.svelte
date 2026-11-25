@@ -18,7 +18,7 @@
 	<link
 		rel="stylesheet"
 		type="text/css"
-		href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+		href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.18.0/devicon.min.css"
 	/>
 	<link rel="icon" href={favicon} />
 </svelte:head>
