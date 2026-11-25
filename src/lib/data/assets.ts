@@ -9,6 +9,7 @@ const asset = (filename: string) => {
 
 const Assets = {
 	CSS: asset('css.svg'),
+	CloudflareWorkers: asset('cloudflare-workers.svg'),
 	FastApi: asset('fastapi.svg'),
 	Flask: asset('flask.svg'),
 	Git: asset('git.svg'),
