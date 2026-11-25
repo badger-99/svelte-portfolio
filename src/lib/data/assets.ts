@@ -39,7 +39,8 @@ const Assets = {
 	TypeScript: asset('typescript.svg'),
 	Unknown: asset('no-img.svg'),
 	Vercel: asset('vercel-white.svg'),
-	Vitest: asset('vitest.svg')
+	Vitest: asset('vitest.svg'),
+	Zod: asset('zod.svg')
 };
 
 export default Assets;

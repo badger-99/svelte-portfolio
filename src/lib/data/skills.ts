@@ -216,6 +216,13 @@ const items = [
 		logo: Assets.Playwright,
 		name: 'Playwright',
 		category: 'test'
+	}),
+	defineSkill({
+		slug: 'zod',
+		color: 'royalblue',
+		logo: Assets.Zod,
+		name: 'Zod',
+		category: 'library'
 	})
 ] as const;
 

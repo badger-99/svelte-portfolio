@@ -22,7 +22,7 @@ const items: Array<Project> = [
 		],
 		logo: Assets.StressTest,
 		name: 'StressTest',
-		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel'),
+		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel', 'zod'),
 		type: 'Web Application',
 		screenshots: [
 			{
