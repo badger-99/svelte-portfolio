@@ -21,6 +21,7 @@ const Assets = {
 	Microverse: asset('microverse.png'),
 	NextJs: asset('nextjs.svg'),
 	Php: asset('php.svg'),
+	Playwright: asset('playwright.svg'),
 	PostgreSQL: asset('postgresql.svg'),
 	Python: asset('python.svg'),
 	Rails: asset('rails.svg'),
@@ -36,7 +37,8 @@ const Assets = {
 	TailwindCSS: asset('tailwindcss.svg'),
 	TypeScript: asset('typescript.svg'),
 	Unknown: asset('no-img.svg'),
-	Vercel: asset('vercel-white.svg')
+	Vercel: asset('vercel-white.svg'),
+	Vitest: asset('vitest.svg')
 };
 
 export default Assets;

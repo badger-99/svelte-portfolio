@@ -202,6 +202,20 @@ const items = [
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'library'
+	}),
+	defineSkill({
+		slug: 'vitest',
+		color: 'yellowgreen',
+		logo: Assets.Vitest,
+		name: 'Vitest',
+		category: 'test'
+	}),
+	defineSkill({
+		slug: 'playwright',
+		color: 'green',
+		logo: Assets.Playwright,
+		name: 'Playwright',
+		category: 'test'
 	})
 ] as const;
 
