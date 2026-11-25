@@ -1,10 +1,55 @@
 import Assets from './assets';
 import { getSkills } from './skills';
 import { ContractType, type Experience } from './types';
+// import globe from 'svelte-awesome/icons/globe';
 
 const title = 'Experience';
 
 const items: Array<Experience> = [
+	/* Capstone volunteer entry, hidden for now. To show it: delete this line and the closing comment line below the entry, and uncomment the globe import.
+	{
+		slug: 'capstone-fellowship',
+		company: 'Capstone Fellowship',
+		description: `
+I build web apps for the church and its ministries, from the first spec to production.
+
+## Project Nehemiah
+
+A contribution tracker the church uses every day, in English and Kiswahili, with SMS reminders and email receipts. I designed and specified the system and shipped it with AI-assisted development, including unit and end-to-end test suites.
+
+- **When "accepted" didn't mean "delivered."** Some SMS reminders were accepted by the gateway but never arrived. I led the investigation: traced them to carrier A2P content filters, confirmed it with an A/B test, and set the copy rules for the English and Kiswahili templates.
+
+## Camp Gilgal
+
+A bilingual site where people register for the senior pastor's Camp Gilgal meetings and get SMS reminders, live since October 2026.
+
+- **What I wrote:** the data layer and registration flow (Drizzle schema, migrations and queries on Neon Postgres, phone-number normalisation, server-side validation with Cloudflare Turnstile, SMS confirmations through NextSMS).
+- **How I worked:** I paired with Claude Code on the interface and the tests, directing the work and reviewing every change before it shipped. The admin area is locked behind Cloudflare Access.
+
+## The church website
+
+A new site for the church, built with Next.js and Payload CMS. Not public yet.
+`,
+		contract: ContractType.Volunteer,
+		type: 'Software Development',
+		location: 'Dar es Salaam, Tanzania',
+		period: { from: new Date('2026-02-11') },
+		skills: getSkills('nextjs', 'sveltekit', 'ts', 'postgresql', 'drizzle', 'nextsms', 'resend'),
+		name: 'Software Engineer',
+		color: '#0778b8',
+		links: [
+			{
+				to: 'https://projectnehemiah.capstonechurches.org',
+				label: 'Project Nehemiah',
+				newTab: true,
+				icon: globe
+			},
+			{ to: 'https://campgilgal.org', label: 'Camp Gilgal', newTab: true, icon: globe }
+		],
+		logo: Assets.CapstoneFellowship,
+		shortDescription: 'Building web apps for a church and its ministries.'
+	},
+	*/
 	{
 		slug: 'lightray-tech',
 		company: 'Lightray Technologies',
