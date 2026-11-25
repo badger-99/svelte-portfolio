@@ -8,6 +8,7 @@ const asset = (filename: string) => {
 };
 
 const Assets = {
+	CampGilgal: asset('camp-gilgal.png'),
 	CSS: asset('css.svg'),
 	CloudflareWorkers: asset('cloudflare-workers.svg'),
 	FastApi: asset('fastapi.svg'),

@@ -64,6 +64,26 @@ const items: Array<Project> = [
 		type: 'Volunteer Project'
 	},
 	{
+		slug: 'camp-gilgal',
+		color: '#dc2626',
+		description:
+			"A bilingual (Kiswahili/English) site where people register for the senior pastor's Camp Gilgal meetings and get SMS reminders, live since October 2026. I wrote the data layer and registration flow; the interface and tests were built with Claude Code, with every change reviewed before it shipped.",
+		shortDescription:
+			'A bilingual (Kiswahili/English) site for Camp Gilgal meeting registration and SMS reminders.',
+		links: [
+			{
+				to: 'https://campgilgal.org',
+				label: 'Website',
+				newTab: true,
+				icon: globe
+			}
+		],
+		logo: Assets.CampGilgal,
+		name: 'Camp Gilgal',
+		skills: getSkills('svelte', 'ts', 'postgresql', 'cloudflare-workers'),
+		type: 'Volunteer Project'
+	},
+	{
 		slug: 'svelte-portfolio',
 		color: '#ff7a00',
 		description: 'Personal Portfolio',
