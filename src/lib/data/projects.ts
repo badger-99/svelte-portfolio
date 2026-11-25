@@ -84,7 +84,7 @@ const items: Array<Project> = [
 	},
 	{
 		slug: 'workspace-reservation',
-		color: 'red',
+		color: '#c0c7d0',
 		description: 'Collaborative Project',
 		shortDescription:
 			'Back-end half of a fullstack project that allows coworking space owners to manage their workspaces, and users to make bookings.',
