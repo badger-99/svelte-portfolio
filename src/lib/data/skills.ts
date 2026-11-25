@@ -230,6 +230,13 @@ const items = [
 		logo: Assets.CloudflareWorkers,
 		name: 'Cloudflare Workers',
 		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'neon',
+		color: 'mediumseagreen',
+		logo: Assets.Neon,
+		name: 'Neon',
+		category: 'db'
 	})
 ] as const;
 

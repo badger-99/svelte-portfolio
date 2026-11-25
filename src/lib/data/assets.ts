@@ -21,6 +21,7 @@ const Assets = {
 	Laravel: asset('laravel.svg'),
 	LightrayTechnologies: asset('lightray-tech.png'),
 	Microverse: asset('microverse.png'),
+	Neon: asset('neon.svg'),
 	NextJs: asset('nextjs.svg'),
 	Php: asset('php.svg'),
 	Playwright: asset('playwright.svg'),
