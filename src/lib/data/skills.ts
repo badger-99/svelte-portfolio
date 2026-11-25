@@ -67,6 +67,11 @@ export const groupByCategory = (
 		category.items.push(item);
 	});
 
+	// Sections follow the `categories` array, not the order skills appear in `items`
+	// (`items` order is kept for the badges on project and experience cards).
+	const rank = (slug: string) => categories.findIndex((it) => it.slug === slug);
+	out.sort((a, b) => rank(a.category.slug) - rank(b.category.slug));
+
 	if (others.length !== 0) {
 		out.push({ category: { name: 'Others', slug: 'others' }, items: others });
 	}
@@ -202,6 +207,104 @@ const items = [
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'library'
+	}),
+	defineSkill({
+		slug: 'vitest',
+		color: 'yellowgreen',
+		logo: Assets.Vitest,
+		name: 'Vitest',
+		category: 'test'
+	}),
+	defineSkill({
+		slug: 'playwright',
+		color: 'green',
+		logo: Assets.Playwright,
+		name: 'Playwright',
+		category: 'test'
+	}),
+	defineSkill({
+		slug: 'zod',
+		color: 'royalblue',
+		logo: Assets.Zod,
+		name: 'Zod',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'cloudflare-workers',
+		color: 'orange',
+		logo: Assets.CloudflareWorkers,
+		name: 'Cloudflare Workers',
+		category: 'devops'
+	}),
+	defineSkill({
+		slug: 'neon',
+		color: 'mediumseagreen',
+		logo: Assets.Neon,
+		name: 'Neon',
+		category: 'db'
+	}),
+	defineSkill({
+		slug: 'ai-sdk',
+		color: 'white',
+		logo: Assets.Vercel,
+		name: 'Vercel AI SDK',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'drizzle',
+		color: 'greenyellow',
+		logo: Assets.Drizzle,
+		name: 'Drizzle',
+		category: 'orm'
+	}),
+	defineSkill({
+		slug: 'python',
+		color: 'gold',
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'git',
+		color: 'orangered',
+		logo: Assets.Git,
+		name: 'Git',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'github',
+		color: 'white',
+		logo: Assets.GitHub,
+		name: 'GitHub',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'twilio',
+		color: 'red',
+		logo: Assets.Twilio,
+		name: 'Twilio',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'resend',
+		color: 'white',
+		logo: Assets.Resend,
+		name: 'Resend',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'nextsms',
+		color: 'orange',
+		logo: Assets.NextSMS,
+		name: 'NextSMS',
+		category: 'devtools'
+	}),
+	defineSkill({
+		slug: 'sveltekit',
+		color: 'orange',
+		logo: Assets.Svelte,
+		name: 'SvelteKit',
+		category: 'framework'
 	})
 ] as const;
 

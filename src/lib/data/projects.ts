@@ -9,8 +9,8 @@ const items: Array<Project> = [
 		slug: 'stresstest',
 		color: '#3b82f6',
 		description:
-			"StressTest is a simple, friendly self-assessment app that helps you understand your stress levels and emotional balance. It's designed to promote awareness, reflection, and well-being — without collecting personal data.",
-		shortDescription: 'A mindful check-in for your stress and emotional well-being. ',
+			'StressTest is a stress check-in built on the Perceived Stress Scale (PSS-10), one of the most widely used stress questionnaires. A language model writes a short personal summary from your answers. Results stay in your browser, and the AI receives your answers but never your name.',
+		shortDescription: 'A PSS-10 stress check-in with an AI-written summary. No account needed.',
 		links: [
 			{
 				to: 'https://github.com/badger-99/stress_test',
@@ -22,33 +22,91 @@ const items: Array<Project> = [
 		],
 		logo: Assets.StressTest,
 		name: 'StressTest',
-		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'supabase'),
+		skills: getSkills('ts', 'nextjs', 'tailwindcss', 'vercel', 'zod', 'ai-sdk'),
 		type: 'Web Application',
 		screenshots: [
 			{
-				label: 'screen 1',
+				label: 'Home',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-1.png'
 			},
 			{
-				label: '2',
+				label: 'Check-in',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-2.png'
 			},
 			{
-				label: '3',
+				label: 'Results',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-3.png'
 			},
 			{
-				label: '4',
+				label: 'History',
 				src: 'src/lib/assets/screenshots/stresstest/Screenshot-4.png'
 			}
 		]
 	},
 	{
+		slug: 'project-nehemiah',
+		color: '#ffd00d',
+		description:
+			'A contribution tracker for Capstone Fellowship, in daily use by the church in English and Kiswahili, with SMS reminders and email receipts. I designed and specified the system and shipped it with AI-assisted development, including unit and end-to-end test suites.',
+		shortDescription:
+			'A bilingual (English/Kiswahili) contribution tracker in daily use by a church.',
+		links: [
+			{
+				to: 'https://projectnehemiah.capstonechurches.org',
+				label: 'Website',
+				newTab: true,
+				icon: globe
+			}
+		],
+		logo: Assets.ProjectNehemiah,
+		name: 'Project Nehemiah',
+		skills: getSkills(
+			'nextjs',
+			'ts',
+			'supabase',
+			'tailwindcss',
+			'vitest',
+			'playwright',
+			'resend',
+			'nextsms'
+		),
+		type: 'Volunteer Project'
+	},
+	{
+		slug: 'camp-gilgal',
+		color: '#dc2626',
+		description:
+			"The senior pastor's Camp Gilgal, a mentorship program for young ministers. A bilingual (Kiswahili/English) site where people register for its meetings and get SMS reminders, live since October 2026. I wrote the data layer and registration flow; the interface and tests were built with Claude Code, with every change reviewed before it shipped.",
+		shortDescription:
+			'Bilingual registration and SMS reminders for a mentorship program for young ministers.',
+		links: [
+			{
+				to: 'https://campgilgal.org',
+				label: 'Website',
+				newTab: true,
+				icon: globe
+			}
+		],
+		logo: Assets.CampGilgal,
+		name: 'Camp Gilgal',
+		skills: getSkills(
+			'svelte',
+			'sveltekit',
+			'ts',
+			'postgresql',
+			'cloudflare-workers',
+			'neon',
+			'drizzle',
+			'nextsms'
+		),
+		type: 'Volunteer Project'
+	},
+	{
 		slug: 'svelte-portfolio',
-		color: 'orange',
+		color: '#ff7a00',
 		description: 'Personal Portfolio',
 		shortDescription:
-			'This portolio website - incase you like it and want to make your one based on it! :)',
+			'This portfolio website, in case you like it and want to make your own based on it! :)',
 		links: [
 			{
 				to: 'https://github.com/badger-99/svelte-portfolio',
@@ -59,30 +117,12 @@ const items: Array<Project> = [
 		],
 		logo: Assets.Svelte,
 		name: 'Svelte Portfolio',
-		skills: getSkills('svelte', 'ts', 'tailwindcss'),
-		type: 'Website',
-		screenshots: [
-			{
-				label: 'screen 1',
-				src: 'src/lib/assets/screenshots/stresstest/Screenshot-1.png'
-			},
-			{
-				label: '2',
-				src: 'src/lib/assets/screenshots/stresstest/Screenshot-2.png'
-			},
-			{
-				label: '3',
-				src: 'src/lib/assets/screenshots/stresstest/Screenshot-3.png'
-			},
-			{
-				label: '4',
-				src: 'src/lib/assets/screenshots/stresstest/Screenshot-4.png'
-			}
-		]
+		skills: getSkills('svelte', 'sveltekit', 'ts', 'tailwindcss', 'cloudflare-workers', 'resend'),
+		type: 'Website'
 	},
 	{
 		slug: 'workspace-reservation',
-		color: 'red',
+		color: '#c0c7d0',
 		description: 'Collaborative Project',
 		shortDescription:
 			'Back-end half of a fullstack project that allows coworking space owners to manage their workspaces, and users to make bookings.',

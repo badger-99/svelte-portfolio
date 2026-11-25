@@ -8,10 +8,14 @@ const asset = (filename: string) => {
 };
 
 const Assets = {
+	CampGilgal: asset('camp-gilgal.png'),
+	CloudflareWorkers: asset('cloudflare-workers.svg'),
 	CSS: asset('css.svg'),
+	Drizzle: asset('drizzle.svg'),
 	FastApi: asset('fastapi.svg'),
 	Flask: asset('flask.svg'),
 	Git: asset('git.svg'),
+	GitHub: asset('github-white.svg'),
 	Go: asset('go.svg'),
 	HTML: asset('html.svg'),
 	JavaScript: asset('javascript.svg'),
@@ -19,13 +23,18 @@ const Assets = {
 	Laravel: asset('laravel.svg'),
 	LightrayTechnologies: asset('lightray-tech.png'),
 	Microverse: asset('microverse.png'),
+	Neon: asset('neon.svg'),
 	NextJs: asset('nextjs.svg'),
+	NextSMS: asset('nextsms.png'),
 	Php: asset('php.svg'),
+	Playwright: asset('playwright.svg'),
 	PostgreSQL: asset('postgresql.svg'),
+	ProjectNehemiah: asset('project-nehemiah.png'),
 	Python: asset('python.svg'),
 	Rails: asset('rails.svg'),
 	React: asset('react.svg'),
 	Redux: asset('redux.svg'),
+	Resend: asset('resend-white.svg'),
 	RSpec: asset('rspec.svg'),
 	Ruby: asset('ruby.svg'),
 	Sass: asset('sass.svg'),
@@ -34,9 +43,12 @@ const Assets = {
 	Svelte: asset('svelte.svg'),
 	Swagger: asset('swagger.svg'),
 	TailwindCSS: asset('tailwindcss.svg'),
+	Twilio: asset('twilio.svg'),
 	TypeScript: asset('typescript.svg'),
 	Unknown: asset('no-img.svg'),
-	Vercel: asset('vercel-white.svg')
+	Vercel: asset('vercel-white.svg'),
+	Vitest: asset('vitest.svg'),
+	Zod: asset('zod.svg')
 };
 
 export default Assets;

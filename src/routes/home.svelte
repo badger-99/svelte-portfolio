@@ -78,13 +78,13 @@
 			<div class="flex flex-1 flex-col gap-4 px-14 text-center lg:text-start">
 				<H2>About Me</H2>
 				<div
-					class="prose text-md dark:prose-invert max-w-xl font-sans text-pretty text-muted-foreground"
+					class="text-md prose max-w-xl font-sans text-pretty text-muted-foreground dark:prose-invert"
 				>
 					{BaseData.about}
 				</div>
 
 				<div
-					class="prose text-md dark:prose-invert max-w-xl font-sans text-pretty text-muted-foreground"
+					class="text-md prose max-w-xl font-sans text-pretty text-muted-foreground dark:prose-invert"
 				>
 					Take a look around — <a href={resolve('/projects')} class="home-link">
 						check out my projects
